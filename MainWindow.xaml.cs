@@ -6,6 +6,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 
+//POMYSLNE SKOPIOWANIE GRY I UTWORZENIE SWOJEGO REPOZYTORIUM
+
 namespace Gra2D
 {
     public partial class MainWindow : Window
