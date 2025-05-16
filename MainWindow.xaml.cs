@@ -24,7 +24,7 @@ namespace Gra2D
         // Dwuwymiarowa tablica kontrolek Image reprezentujących segmenty mapy
         private Image[,] tablicaTerenu;
         // Rozmiar jednego segmentu mapy w pikselach
-        private const int RozmiarSegmentu = 32;
+        private const int RozmiarSegmentu = 45;
 
         // Tablica obrazków terenu – indeks odpowiada rodzajowi terenu
         // Indeks 1: las, 2: łąka, 3: skały
