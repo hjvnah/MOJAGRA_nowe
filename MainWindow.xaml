@@ -14,8 +14,8 @@
         <Label Name="EtykietaDrewna" Content="Drewno: 0" FontSize="16" Margin="0,0,618,50"/>
         <Image x:Name="obraz" Source="/gracz.png" Margin="421,4,291,21"/>
         <Image x:Name="obraz_Kopiuj" Source="/las.png" Margin="312,2,400,19"/>
-        <CheckBox Content="BMW e36" Margin="312,92,400,0"/>
-        <CheckBox Content="BMW e30" Margin="421,92,291,0"/>
+        <CheckBox x:Name="checkboxopcja1" Content="BMW e36" Margin="312,92,400,0" />
+        <CheckBox x:Name="checkboxopcja2" Content="BMW e30" Margin="421,92,291,0"/>
 
         <!-- Kontener wyświetlający mapę -->
         <Grid Name="SiatkaMapy" Grid.Row="1" Background="LightGray"/>

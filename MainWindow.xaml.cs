@@ -191,6 +191,8 @@ namespace Gra2D
                 WczytajMape(oknoDialogowe.FileName);
             }
         }
+
+        
     }
 }
 
