@@ -40,7 +40,10 @@ namespace Gra2D
         public MainWindow()
         {
             InitializeComponent();
+            radioe36.IsChecked = true;
             WczytajObrazyTerenu();
+
+            
 
             // Inicjalizacja obrazka gracza
             obrazGracza = new Image
