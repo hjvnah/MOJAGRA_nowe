@@ -196,11 +196,11 @@ namespace Gra2D
         {
             if (radioe36.IsChecked == true)
             {
-                UstawSkinGracza("gracz.png");
+                UstawSkinGracza("e36_skin.png");
             }
             else if (radioe30.IsChecked == true)
             {
-                UstawSkinGracza("gracz2.png");
+                UstawSkinGracza("e30_skin.png");
             }
         }
         private void UstawSkinGracza(string nazwaPliku)

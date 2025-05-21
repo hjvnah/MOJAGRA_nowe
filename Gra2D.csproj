@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="e30_skin.png" />
+    <None Remove="e36_skin.png" />
     <None Remove="gracz.png" />
     <None Remove="laka.png" />
     <None Remove="las.png" />
@@ -16,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="e30_skin.png" />
+    <Resource Include="e36_skin.png" />
     <Resource Include="gracz.png" />
     <Resource Include="laka.png" />
     <Resource Include="las.png" />

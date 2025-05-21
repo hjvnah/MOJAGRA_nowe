@@ -12,8 +12,8 @@
 
         <Button Content="Wczytaj teren" Click="WczytajMape_Click" Margin="434,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="178" Height="50"/>
         <Label Name="EtykietaDrewna" Content="Drewno: 0" FontSize="16" Margin="0,0,618,50"/>
-        <Image x:Name="obraz" Source="/gracz.png" Margin="421,4,291,21"/>
-        <Image x:Name="obraz_Kopiuj" Source="/las.png" Margin="312,2,400,19"/>
+        <Image x:Name="obraz" Margin="421,4,291,21" Source="/e36_skin.png"/>
+        <Image x:Name="obraz_Kopiuj" Source="/e30_skin.png" Margin="312,2,400,19"/>
  
 
         <!-- Kontener wyświetlający mapę -->
