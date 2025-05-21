@@ -198,7 +198,7 @@ namespace Gra2D
             pozycjaGraczaX = 0;
             pozycjaGraczaY = 0;
             iloscDrewna = 0;
-            EtykietaDrewna.Content = "Drewno: 0";
+            EtykietaDrewna.Content = "Paliwo: 0";
             WczytajMape("mapa.txt"); 
         }
 
@@ -232,7 +232,7 @@ namespace Gra2D
                     mapa[pozycjaGraczaY, pozycjaGraczaX] = LAKA;
                     tablicaTerenu[pozycjaGraczaY, pozycjaGraczaX].Source = obrazyTerenu[LAKA];
                     iloscDrewna++;
-                    EtykietaDrewna.Content = "Drewno: " + iloscDrewna;
+                    EtykietaDrewna.Content = "Paliwo: " + iloscDrewna;
                 }
             }
         }
