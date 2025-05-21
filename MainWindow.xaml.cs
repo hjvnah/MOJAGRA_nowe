@@ -37,6 +37,7 @@ namespace Gra2D
         private Image obrazGracza;
         // Licznik zgromadzonego drewna
         private int iloscDrewna = 0;
+        private string sciezkaMapyUzytkownika = "mapa.txt";
         public MainWindow()
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace Gra2D
         {
             if (radioe36.IsChecked == true)
             {
-                UstawSkinGracza("e36_skin.png");
+                UstawSkinGracza("e36_skin.png");   
             }
             else if (radioe30.IsChecked == true)
             {
@@ -198,7 +199,7 @@ namespace Gra2D
             pozycjaGraczaY = 0;
             iloscDrewna = 0;
             EtykietaDrewna.Content = "Drewno: 0";
-            WczytajMape("twoja_mapa.txt"); // <-- Zmień na ścieżkę do domyślnej mapy
+            WczytajMape("mapa.txt"); // <-- Zmień na ścieżkę do domyślnej mapy
         }
 
         // Obsługa naciśnięć klawiszy – ruch gracza oraz wycinanie lasu
