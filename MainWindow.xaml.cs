@@ -192,7 +192,22 @@ namespace Gra2D
             }
         }
 
-        
+        private void skin_checked(object sender, RoutedEventArgs e)
+        {
+            if (radioe36.IsChecked == true)
+            {
+                UstawSkinGracza("gracz.png");
+            }
+            else if (radioe30.IsChecked == true)
+            {
+                UstawSkinGracza("gracz2.png");
+            }
+        }
+        private void UstawSkinGracza(string nazwaPliku)
+        {
+            BitmapImage nowySkin = new BitmapImage(new Uri(nazwaPliku, UriKind.Relative));
+            obrazGracza.Source = nowySkin;
+        }
     }
 }
 
