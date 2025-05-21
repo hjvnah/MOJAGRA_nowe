@@ -4,29 +4,35 @@
         Title="Gra WPF" Height="600" Width="800"
         KeyDown="OknoGlowne_KeyDown">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFAFADAD" Offset="0.247"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <!-- Panel sterowania -->
 
-        <Button Content="Wczytaj trase" Click="WczytajMape_Click" Margin="434,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="178" Height="50"/>
-        <Label Name="EtykietaDrewna" Content="Paliwo: 0" FontSize="16" Margin="16,35,676,27" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="Wczytaj trase" Click="WczytajMape_Click" Margin="434,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="178" Height="50" Background="Black" Foreground="#FFAF9B9B"/>
+        <Label Name="EtykietaDrewna" Content="Paliwo: 0" FontSize="16" Margin="16,35,676,27" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF690505" Background="#FFB7B7B7"/>
         <Image x:Name="obraz" Margin="405,0,293,9" Source="/e36_skin.png"/>
         <Image x:Name="obraz_Kopiuj" Source="/e30_skin.png" Margin="296,0,400,9"/>
 
 
         <!-- Kontener wyświetlający mapę -->
-        <Grid Name="SiatkaMapy" Grid.Row="1" Background="LightGray">
+        <Grid Name="SiatkaMapy" Grid.Row="1" Background="#FF545454">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="242*"/>
                 <ColumnDefinition Width="559*"/>
             </Grid.ColumnDefinitions>
         </Grid>
-        <RadioButton x:Name="radioe36" GroupName="skiny" Content="BMW e36" Margin="421,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioe30" GroupName="skiny" Content="BMW e30" Margin="313,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Button x:Name="zasadybutton"  Content="Zasady gry" Margin="129,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Height="33" Click="zasadybutton_Click"/>
-        <Button x:Name="koniecbutton" Content="Zakończ gre" Margin="129,58,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="141" Click="koniecbutton_Click"/>
+        <RadioButton x:Name="radioe36" GroupName="skiny" Content="BMW e36" Margin="421,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF690505"/>
+        <RadioButton x:Name="radioe30" GroupName="skiny" Content="BMW e30" Margin="313,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF690505" />
+        <Button x:Name="zasadybutton"  Content="Zasady gry" Margin="129,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Height="33" Click="zasadybutton_Click" Background="Black" Foreground="#FFAF9B9B"/>
+        <Button x:Name="koniecbutton" Content="Zakończ gre" Margin="129,58,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="141" Click="koniecbutton_Click" Background="Black" Foreground="#FFAF9B9B"/>
 
 
     </Grid>
