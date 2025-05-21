@@ -199,7 +199,7 @@ namespace Gra2D
             pozycjaGraczaY = 0;
             iloscDrewna = 0;
             EtykietaDrewna.Content = "Drewno: 0";
-            WczytajMape("mapa.txt"); // <-- Zmień na ścieżkę do domyślnej mapy
+            WczytajMape("mapa.txt"); 
         }
 
         // Obsługa naciśnięć klawiszy – ruch gracza oraz wycinanie lasu
@@ -253,11 +253,19 @@ namespace Gra2D
         private void zasadybutton_Click(object sender, RoutedEventArgs e)
         {
             string zasady = "Zasady gry:\n\n" +
+                    "WYBIERZ SAMOCHÓD PRZED ROZPOCZĘCIEM GRY!\n" +
                     "1. Poruszaj się strzałkami.\n" +
                     "2. Nie możesz wchodzić na skały.\n" +
-                    "3. Naciśnij 'C', aby ściąć drzewo.\n" +
-                    "4. Zbieraj drewno i zdobywaj punkty!";
+                    "3. Naciśnij 'C', aby zebrać paliwo.\n" +
+                    "4. Zbieraj paliwo i dotrzyj do mety!\n"+
+                    "MUSISZ ZEBRAC CO NAJMNIEJ 5 BANIAKOW PALIWA\n"+
+                    "alert: nie zaleza się rozszerzania okna gry";
             MessageBox.Show(zasady, "Zasady gry", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void koniecbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

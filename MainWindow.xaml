@@ -17,10 +17,16 @@
 
 
         <!-- Kontener wyświetlający mapę -->
-        <Grid Name="SiatkaMapy" Grid.Row="1" Background="LightGray"/>
+        <Grid Name="SiatkaMapy" Grid.Row="1" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="242*"/>
+                <ColumnDefinition Width="559*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
         <RadioButton x:Name="radioe36" GroupName="skiny" Content="BMW e36" Margin="421,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioe30" GroupName="skiny" Content="BMW e30" Margin="313,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top" />
         <Button x:Name="zasadybutton"  Content="Zasady gry" Margin="129,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Height="33" Click="zasadybutton_Click"/>
+        <Button x:Name="koniecbutton" Content="Zakończ gre" Margin="129,58,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="34" Width="141" Click="koniecbutton_Click"/>
 
 
     </Grid>
