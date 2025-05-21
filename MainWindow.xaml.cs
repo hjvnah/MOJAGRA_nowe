@@ -161,7 +161,7 @@ namespace Gra2D
         {
             Grid.SetRow(obrazGracza, pozycjaGraczaY);
             Grid.SetColumn(obrazGracza, pozycjaGraczaX);
-
+             
 
             // Sprawdzenie czy gracz dotarł do mety (pozycja X=17, Y=10)
             if (pozycjaGraczaX == 16 && pozycjaGraczaY == 9)
