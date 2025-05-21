@@ -148,7 +148,7 @@ namespace Gra2D
                 AktualizujPozycjeGracza();
 
                 iloscDrewna = 0;
-                EtykietaDrewna.Content = "Drewno: " + iloscDrewna;
+                EtykietaDrewna.Content = "Paliwo: " + iloscDrewna;
             }//koniec try
             catch (Exception ex)
             {
@@ -161,6 +161,44 @@ namespace Gra2D
         {
             Grid.SetRow(obrazGracza, pozycjaGraczaY);
             Grid.SetColumn(obrazGracza, pozycjaGraczaX);
+
+
+            // Sprawdzenie czy gracz dotarł do mety (pozycja X=17, Y=10)
+            if (pozycjaGraczaX == 16 && pozycjaGraczaY == 9)
+            {
+                if (iloscDrewna >= 5)
+                {
+                    var wynik = MessageBox.Show("Gratulacje, przeszłeś grę!\nCzy chcesz zagrać ponownie?",
+                                                "Meta!",
+                                                MessageBoxButton.YesNo,
+                                                MessageBoxImage.Question);
+
+                    if (wynik == MessageBoxResult.Yes)
+                    {
+                        ZresetujGre();
+                    }
+                    else if (wynik == MessageBoxResult.No)
+                    {
+                        Application.Current.Shutdown(); // zamyka aplikację
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chyba czegoś brakuje!\nMasz za mało paliwa (min. 5 potrzebne).",
+                                    "Brak paliwa",
+                                    MessageBoxButton.OK,
+                                    MessageBoxImage.Warning);
+                }
+            }
+        }
+
+        private void ZresetujGre()
+        {
+            pozycjaGraczaX = 0;
+            pozycjaGraczaY = 0;
+            iloscDrewna = 0;
+            EtykietaDrewna.Content = "Drewno: 0";
+            WczytajMape("twoja_mapa.txt"); // <-- Zmień na ścieżkę do domyślnej mapy
         }
 
         // Obsługa naciśnięć klawiszy – ruch gracza oraz wycinanie lasu
@@ -211,7 +249,15 @@ namespace Gra2D
             }
         }
 
-     
+        private void zasadybutton_Click(object sender, RoutedEventArgs e)
+        {
+            string zasady = "Zasady gry:\n\n" +
+                    "1. Poruszaj się strzałkami.\n" +
+                    "2. Nie możesz wchodzić na skały.\n" +
+                    "3. Naciśnij 'C', aby ściąć drzewo.\n" +
+                    "4. Zbieraj drewno i zdobywaj punkty!";
+            MessageBox.Show(zasady, "Zasady gry", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }
 

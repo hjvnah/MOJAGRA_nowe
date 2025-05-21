@@ -11,15 +11,16 @@
         <!-- Panel sterowania -->
 
         <Button Content="Wczytaj trase" Click="WczytajMape_Click" Margin="434,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="178" Height="50"/>
-        <Label Name="EtykietaDrewna" Content="Drewno: 0" FontSize="16" Margin="0,0,618,50"/>
+        <Label Name="EtykietaDrewna" Content="Paliwo: 0" FontSize="16" Margin="16,35,676,27" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Image x:Name="obraz" Margin="405,0,293,9" Source="/e36_skin.png"/>
         <Image x:Name="obraz_Kopiuj" Source="/e30_skin.png" Margin="296,0,400,9"/>
- 
+
 
         <!-- Kontener wyświetlający mapę -->
         <Grid Name="SiatkaMapy" Grid.Row="1" Background="LightGray"/>
         <RadioButton x:Name="radioe36" GroupName="skiny" Content="BMW e36" Margin="421,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioe30" GroupName="skiny" Content="BMW e30" Margin="313,85,0,0" Checked="skin_checked" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button x:Name="zasadybutton"  Content="Zasady gry" Margin="129,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Height="33" Click="zasadybutton_Click"/>
 
 
     </Grid>
