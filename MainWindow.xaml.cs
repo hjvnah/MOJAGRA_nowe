@@ -40,7 +40,6 @@ namespace Gra2D
         public MainWindow()
         {
             InitializeComponent();
-            radioe36.IsChecked = true;
             WczytajObrazyTerenu();
 
             
@@ -51,8 +50,25 @@ namespace Gra2D
                 Width = RozmiarSegmentu,
                 Height = RozmiarSegmentu
             };
-            BitmapImage bmpGracza = new BitmapImage(new Uri("gracz.png", UriKind.Relative));
-            obrazGracza.Source = bmpGracza;
+           
+        }
+        private void skin_checked(object sender, RoutedEventArgs e)
+        {
+            if (radioe36.IsChecked == true)
+            {
+                UstawSkinGracza("e36_skin.png");
+            }
+            else if (radioe30.IsChecked == true)
+            {
+                UstawSkinGracza("e30_skin.png");
+            }
+        }
+        private void UstawSkinGracza(string nazwaPliku)
+        {
+
+
+            BitmapImage nowySkin = new BitmapImage(new Uri(nazwaPliku, UriKind.Relative));
+            obrazGracza.Source = nowySkin;
         }
         private void WczytajObrazyTerenu()
         {
@@ -195,22 +211,7 @@ namespace Gra2D
             }
         }
 
-        private void skin_checked(object sender, RoutedEventArgs e)
-        {
-            if (radioe36.IsChecked == true)
-            {
-                UstawSkinGracza("e36_skin.png");
-            }
-            else if (radioe30.IsChecked == true)
-            {
-                UstawSkinGracza("e30_skin.png");
-            }
-        }
-        private void UstawSkinGracza(string nazwaPliku)
-        {
-            BitmapImage nowySkin = new BitmapImage(new Uri(nazwaPliku, UriKind.Relative));
-            obrazGracza.Source = nowySkin;
-        }
+     
     }
 }
 
