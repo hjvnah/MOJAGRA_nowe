@@ -255,7 +255,7 @@ namespace Gra2D
             string zasady = "Zasady gry:\n\n" +
                     "WYBIERZ SAMOCHÓD PRZED ROZPOCZĘCIEM GRY!\n" +
                     "1. Poruszaj się strzałkami.\n" +
-                    "2. Nie możesz wchodzić na skały.\n" +
+                    "2. Nie możesz wchodzić na martwe punkty(czarne kafelki).\n" +
                     "3. Naciśnij 'C', aby zebrać paliwo.\n" +
                     "4. Zbieraj paliwo i dotrzyj do mety!\n"+
                     "MUSISZ ZEBRAC CO NAJMNIEJ 5 BANIAKOW PALIWA\n"+
